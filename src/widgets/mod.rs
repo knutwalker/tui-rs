@@ -25,6 +25,7 @@ mod list;
 mod paragraph;
 mod reflow;
 mod sparkline;
+mod stackable_barchart;
 mod table;
 mod tabs;
 
@@ -36,6 +37,7 @@ pub use self::gauge::Gauge;
 pub use self::list::{List, ListItem, ListState};
 pub use self::paragraph::{Paragraph, Wrap};
 pub use self::sparkline::Sparkline;
+pub use self::stackable_barchart::{StackableBarChart, ValuePlacement};
 pub use self::table::{Row, Table, TableState};
 pub use self::tabs::Tabs;
 
