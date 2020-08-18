@@ -232,7 +232,7 @@ impl<'a> Widget for StackableBarChart<'a> {
         }
 
         for (i, &(label, value)) in self.data.iter().take(max_index).enumerate() {
-            if value != 0 {
+            if value != 0 && self.value_placement == ValuePlacement::Bottom {
                 if let Some(value_style) = self.value_style {
                     let value_label = &self.values[i];
                     let width = value_label.width() as u16;
