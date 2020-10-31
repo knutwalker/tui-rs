@@ -353,7 +353,7 @@ impl<'a> Chart<'a> {
                 && legend_height < max_legend_height
             {
                 layout.legend_area = Some(Rect::new(
-                    layout.graph_area.right() - legend_width,
+                    layout.graph_area.left(),
                     layout.graph_area.top(),
                     legend_width,
                     legend_height,
