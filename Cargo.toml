@@ -23,7 +23,7 @@ curses = ["easycurses", "pancurses"]
 [dependencies]
 bitflags = "1.0"
 cassowary = "0.3"
-unicode-segmentation = "1.2"
+unicode-segmentation = "1.6"
 unicode-width = "0.1"
 termion = { version = "1.5", optional = true }
 rustbox = { version = "0.11", optional = true }
