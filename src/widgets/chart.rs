@@ -532,7 +532,7 @@ mod tests {
             LegendTestCase {
                 chart_area: Rect::new(0, 0, 100, 100),
                 hidden_legend_constraints: (Constraint::Ratio(1, 4), Constraint::Ratio(1, 4)),
-                legend_area: Some(Rect::new(88, 0, 12, 12)),
+                legend_area: Some(Rect::new(0, 0, 12, 12)),
             },
             LegendTestCase {
                 chart_area: Rect::new(0, 0, 100, 100),

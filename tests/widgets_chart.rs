@@ -230,10 +230,10 @@ fn widgets_chart_can_have_a_legend() {
         .unwrap();
     let mut expected = Buffer::with_lines(vec![
         "┌Chart Test────────────────────────────────────────────────┐",
-        "│10.0│Y Axis                                    ┌─────────┐│",
-        "│    │  ••                                      │Dataset 1││",
-        "│    │    ••                                    │Dataset 2││",
-        "│    │      ••                                  └─────────┘│",
+        "│10.0│Y Axis────┐                                        ••│",
+        "│    ││Dataset 1│                                     •••  │",
+        "│    ││Dataset 2│                                   ••     │",
+        "│    │└─────────┘                                 ••       │",
         "│    │        ••                                ••         │",
         "│    │          ••                            ••           │",
         "│    │            ••                        ••             │",
@@ -270,6 +270,13 @@ fn widgets_chart_can_have_a_legend() {
 
     // Set expected colors of the first dataset
     let line1 = vec![
+        (56, 2),
+        (55, 2),
+        (54, 2),
+        (53, 3),
+        (52, 3),
+        (51, 4),
+        (50, 4),
         (48, 5),
         (49, 5),
         (46, 6),
@@ -315,15 +322,15 @@ fn widgets_chart_can_have_a_legend() {
         (6, 26),
     ];
     let legend1 = vec![
-        (49, 2),
-        (50, 2),
-        (51, 2),
-        (52, 2),
-        (53, 2),
-        (54, 2),
-        (55, 2),
-        (56, 2),
-        (57, 2),
+        (7, 2),
+        (8, 2),
+        (9, 2),
+        (10, 2),
+        (11, 2),
+        (12, 2),
+        (13, 2),
+        (14, 2),
+        (15, 2),
     ];
     for (col, row) in line1 {
         expected.get_mut(col, row).set_fg(Color::Blue);
@@ -334,12 +341,8 @@ fn widgets_chart_can_have_a_legend() {
 
     // Set expected colors of the second dataset
     let line2 = vec![
-        (8, 2),
-        (9, 2),
         (10, 3),
         (11, 3),
-        (12, 4),
-        (13, 4),
         (14, 5),
         (15, 5),
         (16, 6),
@@ -386,15 +389,15 @@ fn widgets_chart_can_have_a_legend() {
         (57, 25),
     ];
     let legend2 = vec![
-        (49, 3),
-        (50, 3),
-        (51, 3),
-        (52, 3),
-        (53, 3),
-        (54, 3),
-        (55, 3),
-        (56, 3),
-        (57, 3),
+        (7, 3),
+        (8, 3),
+        (9, 3),
+        (10, 3),
+        (11, 3),
+        (12, 3),
+        (13, 3),
+        (14, 3),
+        (15, 3),
     ];
     for (col, row) in line2 {
         expected.get_mut(col, row).set_fg(Color::Green);
