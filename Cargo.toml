@@ -18,7 +18,6 @@ edition = "2018"
 
 [features]
 default = ["termion"]
-curses = ["easycurses", "pancurses"]
 
 [dependencies]
 bitflags = "1.0"
@@ -28,8 +27,6 @@ unicode-width = "0.1"
 termion = { version = "1.5", optional = true }
 rustbox = { version = "0.11", optional = true }
 crossterm = { version = "0.19", optional = true }
-easycurses = { version = "0.12.2", optional = true }
-pancurses = { version = "0.16.1", optional = true, features = ["win32a"] }
 serde = { version = "1", "optional" = true, features = ["derive"]}
 
 [dev-dependencies]
@@ -121,7 +118,3 @@ name = "crossterm_demo"
 path = "examples/crossterm_demo.rs"
 required-features = ["crossterm"]
 
-[[example]]
-name = "curses_demo"
-path = "examples/curses_demo.rs"
-required-features = ["curses"]
